@@ -1,0 +1,604 @@
+body {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: #060432;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body,
+html {
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.contenedor1 {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bg_animate {
+    width: 100%;
+    height: 400px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: auto;
+    /* position: relative; */
+    /* overflow: hidden; */
+    /* text-align: center; */
+}
+
+.header_nav {
+    width: 100%;
+    /* position: absolute; */
+    top: 0%;
+    left: 0;
+}
+
+.header_nav .contenedor1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    padding: 15px 0;
+}
+
+.header_nav h1 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: #060432a8;
+    font-size: 60px;
+    text-shadow: 0 0 5px;
+
+}
+
+.header_nav nav a {
+    position: fixed;
+    color: rgb(243, 15, 15);
+    text-decoration: none;
+    right: 10px;
+    top: 0;
+    text-transform: capitalize;
+    /* font-weight: bolder; */
+    /* background: #060432; */
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 300;
+    font-size: 30px;
+}
+
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* height: 100%; */
+}
+
+.banner_title h2 {
+    color: rgb(230, 9, 9);
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.banner_title .llamanos {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: #1a2849;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.llamanos:hover {
+    text-decoration: underline;
+}
+
+.banner_img {
+    animation: movimiento 2.5s linear infinite;
+}
+/* =========================media================ */
+@media (max-width: 768px) {
+    .header_nav h1 {
+        text-align: center;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        color: #060432;
+        font-size: 20px;
+
+    }
+
+    .header_nav nav a {
+        position: fixed;
+        top: 0%;
+        left: 80%;
+    }
+
+    .banner_title h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        position: absolute;
+        top: 90px;
+    }
+
+    .banner_title .llamanos {
+        font-size: 15px;
+        padding: 10px;
+        position: absolute;
+        top: 20%;
+        z-index: 1;
+    }
+
+}
+
+.banner_img img {
+    margin-top: 10px;
+    width: 100%;
+    min-width: 100px;
+    /* display: block; */
+}
+
+.quienes-somos {
+    text-align: center;
+    color: rgb(209, 205, 205);
+    padding: 60px;
+}
+
+.quienes-somos h3 {
+    font-size: 50px;
+    letter-spacing: 9px;
+    color: yellow;
+    /* background: #060432;
+    background: linear-gradient(0deg, rgb(32, 36, 134) 14%, rgba(6, 4, 50, 1) 79%);
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+}
+
+.quienes-somos p {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+
+.contenedor2 {
+    margin: auto;
+    display: table;
+}
+
+.contenedor2 h2 {
+    float: left;
+    color: yellow;
+    position: relative;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.contenedor2 h2 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background-color: #060432;
+    border-left: 3px solid #000;
+    -webkit-animation: maquina 5s infinite alternate steps(33);
+    animation: maquina 5s infinite alternate steps(33);
+}
+
+@-webkit-keyframes maquina {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+/* ====================burbujas==================== */
+.burbuja {
+    border-radius: 50%;
+    background: red;
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(8) {
+    width: 100px;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9) {
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.section-servicios {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cajas-servicios {
+    width: 300px;
+    /* height: 300px; */
+    padding: 10px;
+    color: rgb(201, 196, 196);
+    text-align: center;
+    margin: 20px;
+    border: 1px solid rgb(157, 157, 153);
+}
+
+.cajas-servicios h2 {
+    color: yellow;
+}
+
+/* ================texto animado============= */
+.subtitulo-animado {
+    font: 400 1em/1.5 "Neuton";
+    /* background: #090d00; */
+    color: rgba(255, 255, 255, .25);
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* margin: 0 auto; */
+
+}
+
+.subtitulo-animado span {
+
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+    text-align: center;
+    /* Clip Background Image */
+
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    animation: aitf 80s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+
+}
+
+
+/* Animate Background Image */
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.clinica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: rgb(210, 198, 198);
+    padding: 30px;
+    margin: auto;
+}
+
+.clinica img {
+    min-width: 200px
+}
+
+.clinica h4 {
+    font-size: 40px;
+    margin: auto;
+    color: #1a2849
+}
+
+.clinica p {
+    font-size: 40px;
+    max-width: 800px;
+}
+
+
+/* =====================text temblar================= */
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
+
+.text-temblar {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 80px;
+}
+
+.test {
+    -webkit-animation: squiggly-anim 0.34s linear infinite;
+    animation: squiggly-anim 0.34s linear infinite;
+}
+
+.text-temblar {
+    /* line-height: 100vh; */
+    background: #060432;
+    color: yellow;
+}
+
+.test {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    min-width: 200px;
+    outline: none;
+    text-align: center;
+    line-height: 1;
+}
+
+.small {
+    font-size: 0.5em;
+}
+
+.smaller {
+    font-size: 0.4em;
+}
+
+p {
+    margin: 0;
+}
+
+@-webkit-keyframes squiggly-anim {
+    0% {
+        filter: url("#squiggly-0");
+    }
+
+    25% {
+        filter: url("#squiggly-1");
+    }
+
+    50% {
+        filter: url("#squiggly-2");
+    }
+
+    75% {
+        filter: url("#squiggly-3");
+    }
+
+    100% {
+        filter: url("#squiggly-4");
+    }
+}
+
+@keyframes squiggly-anim {
+    0% {
+        filter: url("#squiggly-0");
+    }
+
+    25% {
+        filter: url("#squiggly-1");
+    }
+
+    50% {
+        filter: url("#squiggly-2");
+    }
+
+    75% {
+        filter: url("#squiggly-3");
+    }
+
+    100% {
+        filter: url("#squiggly-4");
+    }
+}
+
+/* =========================formulario===================== */
+.Formulario {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.Formulario h4 {
+    color: yellow;
+    font-size: 30px;
+}
+.Formulario textarea{
+    resize: none;
+}
+.Formulario input,
+textarea {
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: yellow;
+    border: 1px solid yellow;
+    padding: 20px;
+}
+
+.Formulario button {
+    background: yellow;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+/* =================================pie de pagina===================== */
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #fff;
+    background-color: rgb(37, 36, 36);
+    padding: 10px;
+}
+
+footer div {
+    margin: 60px;
+}
+
+footer a {
+    text-decoration: none;
+    color: yellow;
+    margin: 9px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    color: yellow;
+    cursor: pointer;
+    letter-spacing: 4px;
+}
+
+footer p:hover {
+    text-decoration: underline;
+}
+
+footer .redes i {
+    font-size: 30px;
+    margin: 9px;
+    color: yellow;
+    cursor: pointer;
+}
